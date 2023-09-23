@@ -1480,6 +1480,13 @@
                                     <constraint firstAttribute="height" constant="100" id="K6I-Tt-zGx"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapkitimg" translatesAutoresizingMaskIntoConstraints="NO" id="eyL-j1-Bhi">
+                                <rect key="frame" x="164.66666666666666" y="699" width="64" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="VbE-ne-TBx"/>
+                                    <constraint firstAttribute="height" constant="60" id="woJ-Ds-AaX"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No search result found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mln-gp-J9o">
                                 <rect key="frame" x="25" y="506" width="343" height="20"/>
                                 <constraints>
@@ -1496,6 +1503,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WpB-5T-oZi" firstAttribute="trailing" secondItem="CM5-UN-4ZJ" secondAttribute="trailing" id="8WZ-EX-azF"/>
+                            <constraint firstItem="eyL-j1-Bhi" firstAttribute="centerX" secondItem="L14-hV-hl2" secondAttribute="centerX" id="AZZ-ea-9I5"/>
                             <constraint firstItem="WpB-5T-oZi" firstAttribute="top" secondItem="5LS-AO-5BO" secondAttribute="bottom" id="Aee-4b-ZhM"/>
                             <constraint firstItem="5LS-AO-5BO" firstAttribute="trailing" secondItem="CM5-UN-4ZJ" secondAttribute="trailing" id="HWs-jO-rQr"/>
                             <constraint firstItem="WpB-5T-oZi" firstAttribute="bottom" secondItem="CM5-UN-4ZJ" secondAttribute="bottom" id="K96-1W-A9Q"/>
@@ -1506,11 +1514,13 @@
                             <constraint firstItem="WpB-5T-oZi" firstAttribute="leading" secondItem="CM5-UN-4ZJ" secondAttribute="leading" id="ghn-dk-gyl"/>
                             <constraint firstItem="5LS-AO-5BO" firstAttribute="top" secondItem="L14-hV-hl2" secondAttribute="top" id="gth-78-74Z"/>
                             <constraint firstItem="mln-gp-J9o" firstAttribute="top" secondItem="Q8i-2Q-0Nw" secondAttribute="bottom" constant="30" id="rpB-RS-3uG"/>
+                            <constraint firstItem="CM5-UN-4ZJ" firstAttribute="bottom" secondItem="eyL-j1-Bhi" secondAttribute="bottom" constant="10" id="stG-TY-HrL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="tEL-d4-ecj"/>
                     <connections>
                         <outlet property="lblNoResultFound" destination="mln-gp-J9o" id="7rI-HX-hTl"/>
+                        <outlet property="mapKitView" destination="eyL-j1-Bhi" id="vBO-Lv-LPQ"/>
                         <outlet property="numberOfPG" destination="VqO-33-a5e" id="GSD-zG-4M5"/>
                         <outlet property="searchShowImageView" destination="Q8i-2Q-0Nw" id="1a5-HX-IJ2"/>
                         <outlet property="tableView" destination="WpB-5T-oZi" id="Ggx-eM-DSJ"/>
@@ -1926,20 +1936,27 @@
                                     <outlet property="delegate" destination="KBg-gX-FWE" id="gnj-bv-fqf"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-bB-JFt">
-                                <rect key="frame" x="25" y="743" width="343" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-bB-JFt">
+                                <rect key="frame" x="20" y="743" width="353" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-ce-dqs">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                         <color key="tintColor" red="1" green="0.40428077480000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="phone.fill" catalog="system" title="  Call"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d77-ZS-01g">
-                                        <rect key="frame" x="184" y="0.0" width="159" height="50"/>
+                                        <rect key="frame" x="95" y="0.0" width="126.66666666666669" height="50"/>
                                         <color key="tintColor" red="0.20392156862745098" green="0.62015618747499002" blue="0.25845838335334131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="whatsapp" title="  Whatsapp"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="whatsapp" title="  Whatsapp">
+                                            <fontDescription key="titleFontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRk-DH-EXX">
+                                        <rect key="frame" x="226.66666666666666" y="0.0" width="126.33333333333334" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="rupee" title="Payment"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1954,8 +1971,8 @@
                             <constraint firstItem="K5G-Gb-pxb" firstAttribute="leading" secondItem="dQo-La-UJQ" secondAttribute="leading" id="97u-0O-2fe"/>
                             <constraint firstItem="dQo-La-UJQ" firstAttribute="bottom" secondItem="Fu5-bB-JFt" secondAttribute="bottom" constant="25" id="fHm-2r-kbW"/>
                             <constraint firstItem="K5G-Gb-pxb" firstAttribute="trailing" secondItem="dQo-La-UJQ" secondAttribute="trailing" id="gUw-oI-XLP"/>
-                            <constraint firstItem="Fu5-bB-JFt" firstAttribute="leading" secondItem="dQo-La-UJQ" secondAttribute="leading" constant="25" id="jep-e4-hWd"/>
-                            <constraint firstItem="dQo-La-UJQ" firstAttribute="trailing" secondItem="Fu5-bB-JFt" secondAttribute="trailing" constant="25" id="mhD-Vb-tts"/>
+                            <constraint firstItem="Fu5-bB-JFt" firstAttribute="leading" secondItem="dQo-La-UJQ" secondAttribute="leading" constant="20" id="jep-e4-hWd"/>
+                            <constraint firstItem="dQo-La-UJQ" firstAttribute="trailing" secondItem="Fu5-bB-JFt" secondAttribute="trailing" constant="20" id="mhD-Vb-tts"/>
                             <constraint firstItem="Fu5-bB-JFt" firstAttribute="top" secondItem="K5G-Gb-pxb" secondAttribute="bottom" constant="10" id="nlk-xp-07O"/>
                         </constraints>
                     </view>
@@ -2023,6 +2040,7 @@
         <image name="houseImg" width="612" height="612"/>
         <image name="locationImg" width="761" height="328"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="mapkitimg" width="100" height="99"/>
         <image name="messageBox" width="89" height="70"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="phone" width="72" height="80"/>
@@ -2031,6 +2049,7 @@
         <image name="profile" width="94" height="94"/>
         <image name="rooms" width="340" height="227"/>
         <image name="rooms1" width="340" height="236"/>
+        <image name="rupee" width="30" height="30"/>
         <image name="search" width="94" height="94"/>
         <image name="searchHome" width="1024" height="1024"/>
         <image name="star" catalog="system" width="128" height="116"/>

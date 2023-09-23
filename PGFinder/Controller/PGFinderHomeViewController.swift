@@ -29,6 +29,8 @@ class PGFinderHomeViewController :UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var lblNoResultFound: UILabel!
     @IBOutlet weak var searchShowImageView: UIImageView!
+    @IBOutlet weak var mapKitView: UIImageView!
+    
     var pgDetailsArray: [PGDetails] = []
     var isSearchActive: Bool = false
     var filteredData: [PGDetails] = []
@@ -82,6 +84,12 @@ class PGFinderHomeViewController :UIViewController {
         
         // Add the search bar to the topView
         topView.addSubview(searchBar)
+        //for temprary purpose
+        mapKitView.isHidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        mapKitView.addGestureRecognizer(tapGesture)
+        mapKitView.isUserInteractionEnabled = true
     
     }
     
@@ -98,6 +106,12 @@ class PGFinderHomeViewController :UIViewController {
                pgDetailsArray[indexPath.section].isFavorite.toggle()
                tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
            }
+    }
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        if let findPlace = storyboard?.instantiateViewController(withIdentifier: "SelectPlaceViewController") as? SelectPlaceViewController {
+            self.navigationController?.pushViewController(findPlace, animated: true)
+        }
     }
     
 }
