@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "phone-icon-in-flat-style-on-round-orange-vector-20021874.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "google-logo-business-directory-world-map-google-maps-company-web-directory-world-map-png-clipart-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
