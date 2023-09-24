@@ -14,6 +14,9 @@
 		18069A612A80FC74006154F8 /* PGOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18069A602A80FC74006154F8 /* PGOwnerViewController.swift */; };
 		1892EFDF2A8A6F5A0005102D /* PGDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892EFDE2A8A6F5A0005102D /* PGDetails.swift */; };
 		18B5AEED2ABEFAF0001B6D28 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */; };
+		18B5AEEF2AC00FC5001B6D28 /* GIFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */; };
+		18B5AEF32AC016C1001B6D28 /* PaymentTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */; };
+		18B5AEF52AC018C6001B6D28 /* paymentOptions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */; };
 		18D13B1D2A88EFCE002A9865 /* PGListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */; };
 		18D13B1E2A88EFCE002A9865 /* PGListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */; };
 		18D13B202A895CC3002A9865 /* SearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */; };
@@ -38,6 +41,9 @@
 		18069A602A80FC74006154F8 /* PGOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGOwnerViewController.swift; sourceTree = "<group>"; };
 		1892EFDE2A8A6F5A0005102D /* PGDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDetails.swift; sourceTree = "<group>"; };
 		18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFLoader.swift; sourceTree = "<group>"; };
+		18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTransferViewController.swift; sourceTree = "<group>"; };
+		18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = paymentOptions.gif; sourceTree = "<group>"; };
 		18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGListViewCell.swift; sourceTree = "<group>"; };
 		18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGListViewCell.xib; sourceTree = "<group>"; };
 		18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 				18D13B232A8A0C60002A9865 /* loginForSaveSearchVC.swift */,
 				18D13B252A8A2D07002A9865 /* MyAccountViewController.swift */,
 				18F71A732AA4A78000ED154A /* PGInfoViewController.swift */,
+				18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */,
+				18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */,
+				18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +215,7 @@
 				18D13B1E2A88EFCE002A9865 /* PGListViewCell.xib in Resources */,
 				18EF9BB12A755453008DD8CC /* Assets.xcassets in Resources */,
 				18EF9BAF2A755451008DD8CC /* Main.storyboard in Resources */,
+				18B5AEF52AC018C6001B6D28 /* paymentOptions.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +229,10 @@
 				18F71A742AA4A78000ED154A /* PGInfoViewController.swift in Sources */,
 				18B5AEED2ABEFAF0001B6D28 /* LocationManager.swift in Sources */,
 				18069A572A80D196006154F8 /* PGFinderSearches.swift in Sources */,
+				18B5AEEF2AC00FC5001B6D28 /* GIFLoader.swift in Sources */,
 				18D13B202A895CC3002A9865 /* SearchHistoryViewController.swift in Sources */,
 				18D13B262A8A2D07002A9865 /* MyAccountViewController.swift in Sources */,
+				18B5AEF32AC016C1001B6D28 /* PaymentTransferViewController.swift in Sources */,
 				18069A5B2A80EC8F006154F8 /* SelectPriceViewController.swift in Sources */,
 				18D13B1D2A88EFCE002A9865 /* PGListViewCell.swift in Sources */,
 				18EF9BBF2A76F719008DD8CC /* PGFinderHomeViewController.swift in Sources */,
