@@ -8,35 +8,27 @@
 import Foundation
 import UIKit
 
-class PGFinderSearches :UIViewController {
+class PGFinderSearches : UIViewController {
     
     @IBOutlet weak var listSwitchBtn: UISegmentedControl!
-    var firstViewController : SavedPGViewController!
-    var secondViewController : SearchHistoryViewController!
-    
+    @IBOutlet weak var searchHistory: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
-        setupViewControllers()
         showViewController(atIndex:1)
-    }
-    
-    func setupViewControllers() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        firstViewController = storyboard.instantiateViewController(withIdentifier: "SavedPGViewController") as? SavedPGViewController
-        secondViewController = storyboard.instantiateViewController(withIdentifier: "SearchHistoryViewController") as? SearchHistoryViewController
     }
     
     func showViewController(atIndex index: Int) {
         if index == 0 {
-                 addChild(firstViewController)
-                 secondViewController.removeFromParent()
-                 view.addSubview(firstViewController.view)
+            tableView.isHidden = false
+            searchHistory.isHidden = true
              } else {
-                 addChild(secondViewController)
-                 firstViewController.removeFromParent()
-                 view.addSubview(secondViewController.view)
+                 tableView.isHidden = true
+                 searchHistory.isHidden = false
              }
     }
 
@@ -44,3 +36,38 @@ class PGFinderSearches :UIViewController {
         showViewController(atIndex: listSwitchBtn.selectedSegmentIndex)
     }
 }
+
+extension PGFinderSearches  : UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+        return 5
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 320
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchTBCell")
+        return cell ?? UITableViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "srchCollcell", for: indexPath)
+        
+        return cell
+    }
+}
+

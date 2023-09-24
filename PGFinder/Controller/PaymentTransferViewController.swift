@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PaymentTransferViewController : UIViewController {
+class PaymentTransferViewController : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -28,6 +28,11 @@ class PaymentTransferViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        descriptionText.delegate = self
+        payeeName.delegate = self
+        payeeVPA.delegate = self
+        payeeMerchantCode.delegate = self
+        
         let paymentOptionGif = UIImage.gifImageWithName("paymentOptions")
             imageView.image = paymentOptionGif
         
@@ -36,25 +41,24 @@ class PaymentTransferViewController : UIViewController {
         view.isUserInteractionEnabled = true
 
         }
-
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        if textField != descriptionText {
-//            // Assuming you want to prevent empty text fields
-//                   if textField.text?.isEmpty == true {
-//                       // You can display an error message, prevent further action, or handle it as you see fit.
-//                       // For example, showing an alert:
-//                       let alert = UIAlertController(title: "Error", message: "Text field cannot be empty.", preferredStyle: .alert)
-//                       alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                       present(alert, animated: true, completion: nil)
-//                       
-//                       // You might also clear the text field's content if that's your desired behavior
-//                       textField.text = ""
-//                       // Return false to prevent ending editing and switching to another text field
-//                        return false
-//                   }
-//        }
-//        return true
-//    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        // Check if the editing text field is not equal to descriptionText
+        if textField != descriptionText {
+            // Assuming you want to prevent empty text fields
+            if textField.text?.isEmpty == true {
+                // Display an error message, prevent the user from switching to another text field
+                let alert = UIAlertController(title: "Error", message: "Text field cannot be empty.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                
+                // Return false to prevent ending editing and switching to another text field
+                return false
+            }
+        }
+        
+        // Allow ending editing and switching to another text field
+        return true
+    }
     @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
         // Dismiss the keyboard
         view.endEditing(true)
