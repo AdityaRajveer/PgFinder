@@ -31,6 +31,9 @@ class PGFinderHomeViewController :UIViewController {
     @IBOutlet weak var searchShowImageView: UIImageView!
     @IBOutlet weak var mapKitView: UIImageView!
     
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    @IBOutlet weak var sortBtn: UIButton!
     var pgDetailsArray: [PGDetails] = []
     var isSearchActive: Bool = false
     var filteredData: [PGDetails] = []
@@ -79,6 +82,12 @@ class PGFinderHomeViewController :UIViewController {
                                       roomPics: pgInfoItem.rooms!)
             pgDetailsArray.append(pgDetails)
         }
+        saveBtn.layer.borderWidth = 1
+        saveBtn.layer.borderColor = UIColor.blue.cgColor
+        saveBtn.layer.cornerRadius = 10
+        sortBtn.layer.borderWidth = 1
+        sortBtn.layer.borderColor = UIColor.blue.cgColor
+        sortBtn.layer.cornerRadius = 10
         
         numberOfPG.text = "\(pgDetailsArray.count) PG's available"
         
@@ -183,7 +192,7 @@ extension PGFinderHomeViewController : UITableViewDelegate, UITableViewDataSourc
         return isSearchActive ? filteredData.count : pgDetailsArray.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
+        return 55
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
@@ -225,6 +234,14 @@ extension PGFinderHomeViewController : UITableViewDelegate, UITableViewDataSourc
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collcell", for: indexPath) as? customCollCellsHomeScreen
         let pgDetails = pgDetailsArray[indexPath.row]
         cell?.roomPics.image = pgDetails.roomPics
+        cell?.savePG.layer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        // Make the savePG view a circle
+        cell?.savePG.layer.cornerRadius = (cell?.savePG.bounds.width ?? 0) / 2.0
+        cell?.savePG.layer.masksToBounds = true
+        cell?.shareButton.layer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        // Make the shareButton view a circle
+        cell?.shareButton.layer.cornerRadius = (cell?.shareButton.bounds.width ?? 0) / 2.0
+        cell?.shareButton.layer.masksToBounds = true
         return cell!
     }
     
