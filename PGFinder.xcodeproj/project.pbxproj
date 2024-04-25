@@ -12,6 +12,8 @@
 		18069A5B2A80EC8F006154F8 /* SelectPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18069A5A2A80EC8F006154F8 /* SelectPriceViewController.swift */; };
 		18069A5D2A80ECDD006154F8 /* SelectPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18069A5C2A80ECDD006154F8 /* SelectPlaceViewController.swift */; };
 		18069A612A80FC74006154F8 /* PGOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18069A602A80FC74006154F8 /* PGOwnerViewController.swift */; };
+		182FD75C2BDA27190077023F /* SelectLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */; };
+		182FD75E2BDA2BB40077023F /* SelectPriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */; };
 		1892EFDF2A8A6F5A0005102D /* PGDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892EFDE2A8A6F5A0005102D /* PGDetails.swift */; };
 		18B5AEED2ABEFAF0001B6D28 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */; };
 		18B5AEEF2AC00FC5001B6D28 /* GIFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */; };
@@ -39,6 +41,8 @@
 		18069A5A2A80EC8F006154F8 /* SelectPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPriceViewController.swift; sourceTree = "<group>"; };
 		18069A5C2A80ECDD006154F8 /* SelectPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlaceViewController.swift; sourceTree = "<group>"; };
 		18069A602A80FC74006154F8 /* PGOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGOwnerViewController.swift; sourceTree = "<group>"; };
+		182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectLocationViewController.storyboard; sourceTree = "<group>"; };
+		182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPriceViewController.storyboard; sourceTree = "<group>"; };
 		1892EFDE2A8A6F5A0005102D /* PGDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDetails.swift; sourceTree = "<group>"; };
 		18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFLoader.swift; sourceTree = "<group>"; };
@@ -127,7 +131,8 @@
 			children = (
 				18EF9BAD2A755451008DD8CC /* Main.storyboard */,
 				18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */,
-				18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */,
+				182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */,
+				182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				18F71A732AA4A78000ED154A /* PGInfoViewController.swift */,
 				18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */,
 				18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */,
+				18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */,
 				18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */,
 			);
 			path = Controller;
@@ -211,8 +217,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182FD75E2BDA2BB40077023F /* SelectPriceViewController.storyboard in Resources */,
 				18EF9BB42A755453008DD8CC /* LaunchScreen.storyboard in Resources */,
 				18D13B1E2A88EFCE002A9865 /* PGListViewCell.xib in Resources */,
+				182FD75C2BDA27190077023F /* SelectLocationViewController.storyboard in Resources */,
 				18EF9BB12A755453008DD8CC /* Assets.xcassets in Resources */,
 				18EF9BAF2A755451008DD8CC /* Main.storyboard in Resources */,
 				18B5AEF52AC018C6001B6D28 /* paymentOptions.gif in Resources */,

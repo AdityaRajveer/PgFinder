@@ -16,9 +16,9 @@ class PGFinderViewController: UIViewController {
         welcomeLabel.text = "Welcome to PGFinder"
     }
     @IBAction func lookingForPG(_ sender: Any) {
-        if let selectLocationVC = storyboard?.instantiateViewController(withIdentifier: "SelectLocationViewController") as? SelectLocationViewController {
-                   navigationController?.pushViewController(selectLocationVC, animated: true)
-               }
+        if let selectLocationVC = UIStoryboard(name: "SelectLocationViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectLocationViewController") as? SelectLocationViewController {
+            navigationController?.pushViewController(selectLocationVC, animated: true)
+        }
     }
     
     @IBAction func PGOwner(_ sender: Any) {

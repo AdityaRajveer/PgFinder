@@ -32,16 +32,15 @@ class SelectLocationViewController : UIViewController  {
     }
     
     @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        if let findPlace = storyboard?.instantiateViewController(withIdentifier: "SelectPlaceViewController") as? SelectPlaceViewController {
-                   navigationController?.pushViewController(findPlace, animated: true)
-               }
-
+        if let findPlace = UIStoryboard(name: "SelectLocationViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectPlaceViewController") as? SelectPlaceViewController {
+            navigationController?.pushViewController(findPlace, animated: true)
+        }
     }
 
-    
+  //MARK: Button Actions
     @IBAction func goToSetPriceViewController(_ sender: Any) {
-        if let PGFinderMainScreen = storyboard?.instantiateViewController(withIdentifier: "SelectPriceViewController") as? SelectPriceViewController {
-                   navigationController?.pushViewController(PGFinderMainScreen, animated: true)
-               }
+        if let selectPrice = UIStoryboard(name: "SelectPriceViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectPriceViewController") as? SelectPriceViewController {
+            navigationController?.pushViewController(selectPrice, animated: true)
+        }
     }
 }

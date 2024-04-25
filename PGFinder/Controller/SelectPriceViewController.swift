@@ -78,12 +78,11 @@ extension SelectPriceViewController : UIPickerViewDelegate, UIPickerViewDataSour
             }
         }
     }
-       
+      //MARK: Button Actions
        @IBAction func moveToMainScreenBtnTapped(_ sender: Any) {
-           if let PGFinderMainScreen = storyboard?.instantiateViewController(withIdentifier: "UITabBarController") as? UITabBarController {
+           if let PGFinderMainScreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UITabBarController") as? UITabBarController {
                PGFinderMainScreen.modalPresentationStyle = .fullScreen
                present(PGFinderMainScreen, animated: true)
            }
        }
-    
 }
