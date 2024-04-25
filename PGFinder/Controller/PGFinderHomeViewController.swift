@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ImageSlideShowSwift
 
 class customCollCellsHomeScreen : UICollectionViewCell {
     @IBOutlet weak var roomPics: UIImageView!

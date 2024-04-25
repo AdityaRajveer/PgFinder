@@ -33,15 +33,17 @@
 		18EF9BB42A755453008DD8CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF9BB22A755453008DD8CC /* LaunchScreen.storyboard */; };
 		18EF9BBF2A76F719008DD8CC /* PGFinderHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9BBE2A76F719008DD8CC /* PGFinderHomeViewController.swift */; };
 		18F71A742AA4A78000ED154A /* PGInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F71A732AA4A78000ED154A /* PGInfoViewController.swift */; };
+		492F97F7FE4C923943FA724D /* Pods_PGFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159DD475DDBE8762A77644FB /* Pods_PGFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		159DD475DDBE8762A77644FB /* Pods_PGFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18069A562A80D196006154F8 /* PGFinderSearches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGFinderSearches.swift; sourceTree = "<group>"; };
 		18069A582A80EC71006154F8 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		18069A5A2A80EC8F006154F8 /* SelectPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPriceViewController.swift; sourceTree = "<group>"; };
 		18069A5C2A80ECDD006154F8 /* SelectPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlaceViewController.swift; sourceTree = "<group>"; };
 		18069A602A80FC74006154F8 /* PGOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGOwnerViewController.swift; sourceTree = "<group>"; };
-		182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectLocationViewController.storyboard; sourceTree = "<group>"; };
+		182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SelectLocationViewController.storyboard; path = ../../View/SelectLocationViewController.storyboard; sourceTree = "<group>"; };
 		182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPriceViewController.storyboard; sourceTree = "<group>"; };
 		1892EFDE2A8A6F5A0005102D /* PGDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDetails.swift; sourceTree = "<group>"; };
 		18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		18EF9BB52A755453008DD8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EF9BBE2A76F719008DD8CC /* PGFinderHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGFinderHomeViewController.swift; sourceTree = "<group>"; };
 		18F71A732AA4A78000ED154A /* PGInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGInfoViewController.swift; sourceTree = "<group>"; };
+		24217E54DC265A05C8CD26FA /* Pods-PGFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFinder.debug.xcconfig"; path = "Target Support Files/Pods-PGFinder/Pods-PGFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		EC7B758AB7FD3695B3467049 /* Pods-PGFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFinder.release.xcconfig"; path = "Target Support Files/Pods-PGFinder/Pods-PGFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,18 +75,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492F97F7FE4C923943FA724D /* Pods_PGFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183BA9A32BDA334E0084B0F2 /* SelectPrice */ = {
+			isa = PBXGroup;
+			children = (
+				18069A5A2A80EC8F006154F8 /* SelectPriceViewController.swift */,
+				182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */,
+			);
+			path = SelectPrice;
+			sourceTree = "<group>";
+		};
+		183BA9A42BDA336D0084B0F2 /* ListViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */,
+				18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */,
+			);
+			path = ListViewCell;
+			sourceTree = "<group>";
+		};
 		18B5AEEB2ABEFAB3001B6D28 /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				18069A5C2A80ECDD006154F8 /* SelectPlaceViewController.swift */,
 				18069A582A80EC71006154F8 /* SelectLocationViewController.swift */,
 				18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */,
+				182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -92,6 +116,8 @@
 			children = (
 				18EF9BA62A755451008DD8CC /* PGFinder */,
 				18EF9BA52A755451008DD8CC /* Products */,
+				4E76779C5FAC235F45CE0F24 /* Pods */,
+				3B862457DB79BE26DA5323BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,9 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				18EF9BAD2A755451008DD8CC /* Main.storyboard */,
-				18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */,
-				182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */,
-				182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,11 +163,12 @@
 		18EF9BBD2A75547F008DD8CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				183BA9A42BDA336D0084B0F2 /* ListViewCell */,
+				183BA9A32BDA334E0084B0F2 /* SelectPrice */,
 				18B5AEEB2ABEFAB3001B6D28 /* Location */,
 				18EF9BAB2A755451008DD8CC /* PGFinderViewController.swift */,
 				18EF9BBE2A76F719008DD8CC /* PGFinderHomeViewController.swift */,
 				18069A562A80D196006154F8 /* PGFinderSearches.swift */,
-				18069A5A2A80EC8F006154F8 /* SelectPriceViewController.swift */,
 				18069A602A80FC74006154F8 /* PGOwnerViewController.swift */,
 				18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */,
 				18D13B212A896089002A9865 /* SavedPGViewController.swift */,
@@ -153,10 +177,26 @@
 				18F71A732AA4A78000ED154A /* PGInfoViewController.swift */,
 				18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */,
 				18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */,
-				18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */,
 				18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B862457DB79BE26DA5323BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159DD475DDBE8762A77644FB /* Pods_PGFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E76779C5FAC235F45CE0F24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24217E54DC265A05C8CD26FA /* Pods-PGFinder.debug.xcconfig */,
+				EC7B758AB7FD3695B3467049 /* Pods-PGFinder.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18EF9BB82A755453008DD8CC /* Build configuration list for PBXNativeTarget "PGFinder" */;
 			buildPhases = (
+				F83D531E1C2172DF3DD5B005 /* [CP] Check Pods Manifest.lock */,
 				18EF9BA02A755451008DD8CC /* Sources */,
 				18EF9BA12A755451008DD8CC /* Frameworks */,
 				18EF9BA22A755451008DD8CC /* Resources */,
+				33527AEE1F3F20229BF8860C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +270,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33527AEE1F3F20229BF8860C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83D531E1C2172DF3DD5B005 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PGFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18EF9BA02A755451008DD8CC /* Sources */ = {
@@ -394,6 +478,7 @@
 		};
 		18EF9BB92A755453008DD8CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24217E54DC265A05C8CD26FA /* Pods-PGFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +507,7 @@
 		};
 		18EF9BBA2A755453008DD8CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7B758AB7FD3695B3467049 /* Pods-PGFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

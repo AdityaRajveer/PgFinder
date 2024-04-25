@@ -1,0 +1,16 @@
+PODS:
+  - ImageSlideShowSwift (0.1.2)
+
+DEPENDENCIES:
+  - ImageSlideShowSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ImageSlideShowSwift
+
+SPEC CHECKSUMS:
+  ImageSlideShowSwift: 507b260d3fb44e21164facc4f017102b960ca283
+
+PODFILE CHECKSUM: b99e783c0b2895ee4be64898e58c6c15e7693c4a
+
+COCOAPODS: 1.13.0

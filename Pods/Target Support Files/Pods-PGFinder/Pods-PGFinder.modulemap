@@ -1,0 +1,6 @@
+framework module Pods_PGFinder {
+  umbrella header "Pods-PGFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
