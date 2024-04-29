@@ -15,10 +15,19 @@
 		182FD75C2BDA27190077023F /* SelectLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */; };
 		182FD75E2BDA2BB40077023F /* SelectPriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */; };
 		1892EFDF2A8A6F5A0005102D /* PGDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892EFDE2A8A6F5A0005102D /* PGDetails.swift */; };
+		18AB971B2BDFCFBC0026EB88 /* InfoViewControllerCustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB971A2BDFCFBC0026EB88 /* InfoViewControllerCustomCells.swift */; };
+		18AB971D2BDFD0140026EB88 /* PGInfoTableViewCOntroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB971C2BDFD0140026EB88 /* PGInfoTableViewCOntroller.swift */; };
+		18AB971F2BDFD0310026EB88 /* PGInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB971E2BDFD0310026EB88 /* PGInfoCollectionViewController.swift */; };
+		18AB97282BE02A260026EB88 /* HomeScreenSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB97272BE02A260026EB88 /* HomeScreenSearchViewController.swift */; };
+		18AB972C2BE02AD40026EB88 /* HomeScreenCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB972B2BE02AD40026EB88 /* HomeScreenCollectionViewExtension.swift */; };
+		18AB972E2BE02B0E0026EB88 /* HomeScreenTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB972D2BE02B0E0026EB88 /* HomeScreenTableViewExtension.swift */; };
+		18AB97312BE02BB70026EB88 /* ExtensionSearchTable&CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB97302BE02BB70026EB88 /* ExtensionSearchTable&CollectionCell.swift */; };
 		18B5AEED2ABEFAF0001B6D28 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */; };
 		18B5AEEF2AC00FC5001B6D28 /* GIFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */; };
 		18B5AEF32AC016C1001B6D28 /* PaymentTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */; };
 		18B5AEF52AC018C6001B6D28 /* paymentOptions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */; };
+		18C1A4B92BDB92A400C64720 /* CustomCellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A4B82BDB92A400C64720 /* CustomCellsTableViewCell.swift */; };
+		18C1A4BB2BDB92EE00C64720 /* CustomHomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1A4BA2BDB92EE00C64720 /* CustomHomeScreenCollectionViewCell.swift */; };
 		18D13B1D2A88EFCE002A9865 /* PGListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */; };
 		18D13B1E2A88EFCE002A9865 /* PGListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */; };
 		18D13B202A895CC3002A9865 /* SearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */; };
@@ -46,10 +55,19 @@
 		182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SelectLocationViewController.storyboard; path = ../../View/SelectLocationViewController.storyboard; sourceTree = "<group>"; };
 		182FD75D2BDA2BB40077023F /* SelectPriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPriceViewController.storyboard; sourceTree = "<group>"; };
 		1892EFDE2A8A6F5A0005102D /* PGDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDetails.swift; sourceTree = "<group>"; };
+		18AB971A2BDFCFBC0026EB88 /* InfoViewControllerCustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerCustomCells.swift; sourceTree = "<group>"; };
+		18AB971C2BDFD0140026EB88 /* PGInfoTableViewCOntroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGInfoTableViewCOntroller.swift; sourceTree = "<group>"; };
+		18AB971E2BDFD0310026EB88 /* PGInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGInfoCollectionViewController.swift; sourceTree = "<group>"; };
+		18AB97272BE02A260026EB88 /* HomeScreenSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenSearchViewController.swift; sourceTree = "<group>"; };
+		18AB972B2BE02AD40026EB88 /* HomeScreenCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewExtension.swift; sourceTree = "<group>"; };
+		18AB972D2BE02B0E0026EB88 /* HomeScreenTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableViewExtension.swift; sourceTree = "<group>"; };
+		18AB97302BE02BB70026EB88 /* ExtensionSearchTable&CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionSearchTable&CollectionCell.swift"; sourceTree = "<group>"; };
 		18B5AEEC2ABEFAF0001B6D28 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFLoader.swift; sourceTree = "<group>"; };
 		18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTransferViewController.swift; sourceTree = "<group>"; };
 		18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = paymentOptions.gif; sourceTree = "<group>"; };
+		18C1A4B82BDB92A400C64720 /* CustomCellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellsTableViewCell.swift; sourceTree = "<group>"; };
+		18C1A4BA2BDB92EE00C64720 /* CustomHomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGListViewCell.swift; sourceTree = "<group>"; };
 		18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGListViewCell.xib; sourceTree = "<group>"; };
 		18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewController.swift; sourceTree = "<group>"; };
@@ -91,13 +109,110 @@
 			path = SelectPrice;
 			sourceTree = "<group>";
 		};
-		183BA9A42BDA336D0084B0F2 /* ListViewCell */ = {
+		183BA9A42BDA336D0084B0F2 /* ListedDateInfoCell */ = {
 			isa = PBXGroup;
 			children = (
 				18D13B1B2A88EFCE002A9865 /* PGListViewCell.swift */,
 				18D13B1C2A88EFCE002A9865 /* PGListViewCell.xib */,
 			);
-			path = ListViewCell;
+			path = ListedDateInfoCell;
+			sourceTree = "<group>";
+		};
+		18AB97192BDFCF8E0026EB88 /* Info View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18AB971A2BDFCFBC0026EB88 /* InfoViewControllerCustomCells.swift */,
+				18F71A732AA4A78000ED154A /* PGInfoViewController.swift */,
+				18AB971C2BDFD0140026EB88 /* PGInfoTableViewCOntroller.swift */,
+				18AB971E2BDFD0310026EB88 /* PGInfoCollectionViewController.swift */,
+			);
+			path = "Info View Controller";
+			sourceTree = "<group>";
+		};
+		18AB97202BDFD10A0026EB88 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */,
+				18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		18AB97212BDFD13E0026EB88 /* Saved and Search History */ = {
+			isa = PBXGroup;
+			children = (
+				18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */,
+				18D13B212A896089002A9865 /* SavedPGViewController.swift */,
+			);
+			path = "Saved and Search History";
+			sourceTree = "<group>";
+		};
+		18AB97222BDFD1810026EB88 /* PGFinderWelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9BAB2A755451008DD8CC /* PGFinderViewController.swift */,
+			);
+			path = PGFinderWelcomeScreen;
+			sourceTree = "<group>";
+		};
+		18AB97232BDFD1930026EB88 /* PGOwnerLoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18069A602A80FC74006154F8 /* PGOwnerViewController.swift */,
+			);
+			path = PGOwnerLoginScreen;
+			sourceTree = "<group>";
+		};
+		18AB97242BDFD1BB0026EB88 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				18D13B252A8A2D07002A9865 /* MyAccountViewController.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		18AB97252BDFD1CF0026EB88 /* LoginForSaveSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				18D13B232A8A0C60002A9865 /* loginForSaveSearchVC.swift */,
+			);
+			path = LoginForSaveSearchVC;
+			sourceTree = "<group>";
+		};
+		18AB97262BDFD2010026EB88 /* App and Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9BA72A755451008DD8CC /* AppDelegate.swift */,
+				18EF9BA92A755451008DD8CC /* SceneDelegate.swift */,
+			);
+			path = "App and Scene Delegate";
+			sourceTree = "<group>";
+		};
+		18AB97292BE02A6C0026EB88 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				18069A562A80D196006154F8 /* PGFinderSearches.swift */,
+				18AB97272BE02A260026EB88 /* HomeScreenSearchViewController.swift */,
+				18AB97302BE02BB70026EB88 /* ExtensionSearchTable&CollectionCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		18AB972A2BE02AAC0026EB88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18AB972B2BE02AD40026EB88 /* HomeScreenCollectionViewExtension.swift */,
+				18AB972D2BE02B0E0026EB88 /* HomeScreenTableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18AB972F2BE02B4F0026EB88 /* PGFinerHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9BBE2A76F719008DD8CC /* PGFinderHomeViewController.swift */,
+			);
+			path = PGFinerHomeViewController;
 			sourceTree = "<group>";
 		};
 		18B5AEEB2ABEFAB3001B6D28 /* Location */ = {
@@ -109,6 +224,27 @@
 				182FD75B2BDA27190077023F /* SelectLocationViewController.storyboard */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		18C1A4B72BDB921B00C64720 /* Home Screen Table and COllection view cell */ = {
+			isa = PBXGroup;
+			children = (
+				18C1A4B82BDB92A400C64720 /* CustomCellsTableViewCell.swift */,
+				18C1A4BA2BDB92EE00C64720 /* CustomHomeScreenCollectionViewCell.swift */,
+			);
+			path = "Home Screen Table and COllection view cell";
+			sourceTree = "<group>";
+		};
+		18DAAA682BDFBD7A00B55622 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18AB972F2BE02B4F0026EB88 /* PGFinerHomeViewController */,
+				18AB972A2BE02AAC0026EB88 /* Extensions */,
+				18AB97292BE02A6C0026EB88 /* Search */,
+				183BA9A42BDA336D0084B0F2 /* ListedDateInfoCell */,
+				18C1A4B72BDB921B00C64720 /* Home Screen Table and COllection view cell */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		18EF9B9B2A755451008DD8CC = {
@@ -132,12 +268,12 @@
 		18EF9BA62A755451008DD8CC /* PGFinder */ = {
 			isa = PBXGroup;
 			children = (
-				18EF9BA72A755451008DD8CC /* AppDelegate.swift */,
-				18EF9BA92A755451008DD8CC /* SceneDelegate.swift */,
+				18AB97262BDFD2010026EB88 /* App and Scene Delegate */,
 				18EF9BBB2A75546F008DD8CC /* Model */,
-				18EF9BBD2A75547F008DD8CC /* Controller */,
 				18EF9BBC2A755479008DD8CC /* View */,
+				18EF9BBD2A75547F008DD8CC /* Controller */,
 				18EF9BB02A755453008DD8CC /* Assets.xcassets */,
+				18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */,
 				18EF9BB22A755453008DD8CC /* LaunchScreen.storyboard */,
 				18EF9BB52A755453008DD8CC /* Info.plist */,
 			);
@@ -163,21 +299,16 @@
 		18EF9BBD2A75547F008DD8CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				183BA9A42BDA336D0084B0F2 /* ListViewCell */,
+				18AB97252BDFD1CF0026EB88 /* LoginForSaveSearchVC */,
+				18AB97242BDFD1BB0026EB88 /* MyAccount */,
+				18AB97232BDFD1930026EB88 /* PGOwnerLoginScreen */,
+				18AB97222BDFD1810026EB88 /* PGFinderWelcomeScreen */,
+				18AB97212BDFD13E0026EB88 /* Saved and Search History */,
+				18AB97192BDFCF8E0026EB88 /* Info View Controller */,
+				18DAAA682BDFBD7A00B55622 /* HomeScreen */,
 				183BA9A32BDA334E0084B0F2 /* SelectPrice */,
 				18B5AEEB2ABEFAB3001B6D28 /* Location */,
-				18EF9BAB2A755451008DD8CC /* PGFinderViewController.swift */,
-				18EF9BBE2A76F719008DD8CC /* PGFinderHomeViewController.swift */,
-				18069A562A80D196006154F8 /* PGFinderSearches.swift */,
-				18069A602A80FC74006154F8 /* PGOwnerViewController.swift */,
-				18D13B1F2A895CC3002A9865 /* SearchHistoryViewController.swift */,
-				18D13B212A896089002A9865 /* SavedPGViewController.swift */,
-				18D13B232A8A0C60002A9865 /* loginForSaveSearchVC.swift */,
-				18D13B252A8A2D07002A9865 /* MyAccountViewController.swift */,
-				18F71A732AA4A78000ED154A /* PGInfoViewController.swift */,
-				18B5AEEE2AC00FC5001B6D28 /* GIFLoader.swift */,
-				18B5AEF22AC016C1001B6D28 /* PaymentTransferViewController.swift */,
-				18B5AEF42AC018C6001B6D28 /* paymentOptions.gif */,
+				18AB97202BDFD10A0026EB88 /* Payment */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,7 +341,6 @@
 				18EF9BA02A755451008DD8CC /* Sources */,
 				18EF9BA12A755451008DD8CC /* Frameworks */,
 				18EF9BA22A755451008DD8CC /* Resources */,
-				33527AEE1F3F20229BF8860C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,23 +402,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33527AEE1F3F20229BF8860C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PGFinder/Pods-PGFinder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F83D531E1C2172DF3DD5B005 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,21 +433,30 @@
 			files = (
 				18F71A742AA4A78000ED154A /* PGInfoViewController.swift in Sources */,
 				18B5AEED2ABEFAF0001B6D28 /* LocationManager.swift in Sources */,
+				18AB972C2BE02AD40026EB88 /* HomeScreenCollectionViewExtension.swift in Sources */,
+				18AB97282BE02A260026EB88 /* HomeScreenSearchViewController.swift in Sources */,
+				18AB971D2BDFD0140026EB88 /* PGInfoTableViewCOntroller.swift in Sources */,
 				18069A572A80D196006154F8 /* PGFinderSearches.swift in Sources */,
 				18B5AEEF2AC00FC5001B6D28 /* GIFLoader.swift in Sources */,
+				18AB971F2BDFD0310026EB88 /* PGInfoCollectionViewController.swift in Sources */,
 				18D13B202A895CC3002A9865 /* SearchHistoryViewController.swift in Sources */,
 				18D13B262A8A2D07002A9865 /* MyAccountViewController.swift in Sources */,
 				18B5AEF32AC016C1001B6D28 /* PaymentTransferViewController.swift in Sources */,
 				18069A5B2A80EC8F006154F8 /* SelectPriceViewController.swift in Sources */,
 				18D13B1D2A88EFCE002A9865 /* PGListViewCell.swift in Sources */,
 				18EF9BBF2A76F719008DD8CC /* PGFinderHomeViewController.swift in Sources */,
+				18C1A4B92BDB92A400C64720 /* CustomCellsTableViewCell.swift in Sources */,
 				18D13B222A896089002A9865 /* SavedPGViewController.swift in Sources */,
 				1892EFDF2A8A6F5A0005102D /* PGDetails.swift in Sources */,
+				18AB971B2BDFCFBC0026EB88 /* InfoViewControllerCustomCells.swift in Sources */,
+				18AB972E2BE02B0E0026EB88 /* HomeScreenTableViewExtension.swift in Sources */,
 				18069A612A80FC74006154F8 /* PGOwnerViewController.swift in Sources */,
+				18C1A4BB2BDB92EE00C64720 /* CustomHomeScreenCollectionViewCell.swift in Sources */,
 				18EF9BAC2A755451008DD8CC /* PGFinderViewController.swift in Sources */,
 				18EF9BA82A755451008DD8CC /* AppDelegate.swift in Sources */,
 				18069A5D2A80ECDD006154F8 /* SelectPlaceViewController.swift in Sources */,
 				18D13B242A8A0C60002A9865 /* loginForSaveSearchVC.swift in Sources */,
+				18AB97312BE02BB70026EB88 /* ExtensionSearchTable&CollectionCell.swift in Sources */,
 				18EF9BAA2A755451008DD8CC /* SceneDelegate.swift in Sources */,
 				18069A592A80EC71006154F8 /* SelectLocationViewController.swift in Sources */,
 			);

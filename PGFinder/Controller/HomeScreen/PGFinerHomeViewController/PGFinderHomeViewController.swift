@@ -7,38 +7,23 @@
 
 import Foundation
 import UIKit
-import ImageSlideShowSwift
-
-class customCollCellsHomeScreen : UICollectionViewCell {
-    @IBOutlet weak var roomPics: UIImageView!
-    @IBOutlet weak var savePG: UIButton!
-    @IBOutlet weak var shareButton: UIButton!
-}
-class customCellsHomeScreen : UITableViewCell {
-    
-    @IBOutlet weak var pgRent: UILabel!
-    @IBOutlet weak var pgAddress: UILabel!
-    @IBOutlet weak var listedDate: UILabel!
-    @IBOutlet weak var pgServiceAvailability: UILabel!
-    @IBOutlet weak var pgNames: UILabel!
-}
     
 class PGFinderHomeViewController :UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var numberOfPG: UILabel!
-
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var lblNoResultFound: UILabel!
     @IBOutlet weak var searchShowImageView: UIImageView!
     @IBOutlet weak var mapKitView: UIImageView!
-    
     @IBOutlet weak var saveBtn: UIButton!
-    
     @IBOutlet weak var sortBtn: UIButton!
+
+    
     var pgDetailsArray: [PGDetails] = []
     var isSearchActive: Bool = false
     var filteredData: [PGDetails] = []
-      let searchText = ""
+    let searchText = ""
+
     
     // Create a search bar
      let searchBar: UISearchBar = {
@@ -97,11 +82,14 @@ class PGFinderHomeViewController :UIViewController {
         //for temprary purpose
         mapKitView.isHidden = true
         
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         mapKitView.addGestureRecognizer(tapGesture)
         mapKitView.isUserInteractionEnabled = true
     
     }
+    
+    //MARK: Button Action
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         let newImage = UIImage(named: "heart.fill")?.withTintColor(.red)
@@ -130,120 +118,4 @@ extension UITableView {
         let pointInTable = subview.convert(subview.bounds.origin, to: self)
         return self.indexPathForRow(at: pointInTable)
     }
-}
-
-
-extension PGFinderHomeViewController : UISearchBarDelegate, UISearchControllerDelegate {
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        isSearchActive = false
-        filteredData = [] // Clear the filtered data
-        tableView.reloadData()
-        searchBar.showsCancelButton = false
-        searchShowImageView.isHidden = true
-        lblNoResultFound.isHidden = true
-        searchBar.endEditing(true)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filterData(with: searchText)
-        searchBar.showsCancelButton = true // Show the cancel button
-    }
-    
-    func filterData(with searchText: String) {
-        if searchText.isEmpty {
-            isSearchActive = false
-            filteredData = []
-            searchShowImageView.isHidden = true
-            lblNoResultFound.isHidden = true
-            numberOfPG.text = "\(pgDetailsArray.count) PG's available"
-        } else {
-            isSearchActive = true
-            filteredData = pgDetailsArray.filter { pgDetails in
-                let containsText = pgDetails.pgName.localizedCaseInsensitiveContains(searchText) ||
-                                  pgDetails.pgAddress.localizedCaseInsensitiveContains(searchText)
-                
-                if containsText {
-                    numberOfPG.text = "\(filteredData.count) PG's available"
-                }
-                return containsText
-            }
-
-            // Show the search image if no result is found
-            searchShowImageView.isHidden = filteredData.count != 0
-            lblNoResultFound.isHidden = filteredData.count != 0
-        }
-        tableView.reloadData()
-    }
-
-
-      func willDismissSearchController(_ searchController: UISearchController) {
-          navigationItem.searchController = nil // Dismiss the search controller
-      }
-
-      func didDismissSearchController(_ searchController: UISearchController) {
-          searchController.searchBar.resignFirstResponder() // Hide the keyboard
-      }
-}
-
-extension PGFinderHomeViewController : UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return isSearchActive ? filteredData.count : pgDetailsArray.count
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 55
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
-        return 5
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let checkPGInfo = storyboard?.instantiateViewController(withIdentifier: "PGInfoViewController") as? PGInfoViewController {
-            checkPGInfo.pgDetailsArray = self.pgDetailsArray
-            checkPGInfo.indexRow = indexPath
-            tableView.deselectRow(at: indexPath, animated: true)
-            self.present(checkPGInfo, animated: true, completion: nil)
-        }
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? customCellsHomeScreen
-        let pgDetails = isSearchActive ? filteredData[indexPath.section] : pgDetailsArray[indexPath.section]
-        // Configure the cell using pgDetails
-        cell?.pgNames.text = pgDetails.pgName
-        cell?.pgAddress.text = pgDetails.pgAddress
-        cell?.pgRent.text = pgDetails.pgRent
-        cell?.pgServiceAvailability.text = pgDetails.pgAvailabilty
-        cell?.listedDate.text = pgDetails.listedDate
-        return cell ?? UITableViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collcell", for: indexPath) as? customCollCellsHomeScreen
-        let pgDetails = pgDetailsArray[indexPath.row]
-        cell?.roomPics.image = pgDetails.roomPics
-        cell?.savePG.layer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
-        // Make the savePG view a circle
-        cell?.savePG.layer.cornerRadius = (cell?.savePG.bounds.width ?? 0) / 2.0
-        cell?.savePG.layer.masksToBounds = true
-        cell?.shareButton.layer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
-        // Make the shareButton view a circle
-        cell?.shareButton.layer.cornerRadius = (cell?.shareButton.bounds.width ?? 0) / 2.0
-        cell?.shareButton.layer.masksToBounds = true
-        return cell!
-    }
-    
 }
